@@ -27,5 +27,6 @@ jobs:
 
       - name: Run Tests with Vitest
         run: npm run test
+        
       - name: Use Eslint
         run: npm run eslint
