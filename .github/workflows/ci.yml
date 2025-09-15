@@ -3,6 +3,8 @@ name: CI
 on:
   pull_request:
     branches: [main]
+  push:
+    branches: [main]
 
 jobs:
   build-and-test:
@@ -25,3 +27,6 @@ jobs:
 
       - name: Run Tests with Vitest
         run: npm run test
+        
+      - name: Use Eslint
+        run: npm run lint
