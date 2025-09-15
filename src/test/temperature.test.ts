@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { isOverheating } from "../temperature";
+import { isOverheating, isZero} from "../temperature";
 
 describe("isOverheating", () => {
   it("returns true if temp is above 70", () => {
@@ -8,5 +8,15 @@ describe("isOverheating", () => {
 
   it("returns false if temp is 70 or below", () => {
     expect(isOverheating(70)).toBe(false);
+  });
+});
+
+describe("isZero", () => {
+  it("returns true if temp is 0", () => {
+    expect(isZero(0)).toBe(true);
+  });
+
+  it("returns false if temp is 0", () => {
+    expect(isZero(5)).toBe(false);
   });
 });
