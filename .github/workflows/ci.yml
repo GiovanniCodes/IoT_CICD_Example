@@ -1,9 +1,9 @@
 name: CI
 
 on:
-  push:
-    branches: [main]
   pull_request:
+      branches: [main]
+  push:
     branches: [main]
 
 jobs:
@@ -25,11 +25,11 @@ jobs:
       - name: Build TypeScript
         run: npm run build
 
-      - name: Run Tests with Vitest
-        run: npm run test
-
       - name: Run ESLint
         run: npm run lint
+
+      - name: Run Tests with Vitest
+        run: npm run test
 
       # FOR IT TO WORK WITH GITHUB Actions and push to Docker registry do the following
       # In your repo settings, go to Settings → Secrets and variables → Actions → Secrets, and add:
