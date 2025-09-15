@@ -19,7 +19,7 @@ jobs:
         with:
           node-version: "22"
 
-      - name: Install dependencies
+      - name: Install dependencieskuhiuhouh
         run: npm install
 
       - name: Build TypeScript
