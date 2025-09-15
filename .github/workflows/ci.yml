@@ -28,8 +28,8 @@ jobs:
       - name: Run Tests with Vitest
         run: npm run test
       
-      - name: Intentional failure step
-        run: exit 1
+      # - name: Intentional failure step
+      #   run: exit 1
 
       - name: Run ESLint
         run: npm run lint
