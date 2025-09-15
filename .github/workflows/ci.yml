@@ -28,9 +28,7 @@ jobs:
       - name: Run Tests with Vitest
         run: npm run test
 
-        
-
-      - name: Run ESLint
+      - name: Run Tests with Eslint src
         run: npm run lint
 
       # FOR IT TO WORK WITH GITHUB Actions and push to Docker registry do the following
