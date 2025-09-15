@@ -3,6 +3,6 @@ import { isOn } from "../toggleLed";
 
 describe("isOn", () => {
   it("returns true if led is On", () => {
-    expect(isOn(false)).toBe(true);
+    expect(isOn(true)).toBe(true);
   });
 });
