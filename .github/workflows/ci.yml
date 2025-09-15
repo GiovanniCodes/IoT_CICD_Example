@@ -1,8 +1,10 @@
 name: CI
 
 on:
+  push:
+    branches: [main]    
   pull_request:
-    branches: [main]
+    branches: [main]    
 
 jobs:
   build-and-test:
@@ -15,7 +17,8 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "22"
+          node-version: "20"
+          cache: "npm"
 
       - name: Install dependencies
         run: npm install
@@ -23,5 +26,9 @@ jobs:
       - name: Build TypeScript
         run: npm run build
 
-      - name: Run Tests with Vitest
+      # ✅ 新增 ESLint 检查
+      - name: Run ESLint
+        run: npm run lint
+
+      - name: Run Unit Tests with Vitest
         run: npm run test
