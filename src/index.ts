@@ -1,7 +1,7 @@
 import express, { Request, Response } from "express";
 
 const app = express();
-const PORT = process.env.PORT || 5001;
+//const PORT = express.PORT || 5001;
 
 // Middleware for parsing JSON
 app.use(express.json());
@@ -12,6 +12,6 @@ app.get("/", (req: Request, res: Response) => {
 });
 
 // Start the server
-app.listen(PORT, () => {
+/*app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
-});
+});*/
