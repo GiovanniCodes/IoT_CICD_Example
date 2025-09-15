@@ -1,8 +1,6 @@
 name: CI
 
 on:
-  push:
-    branches: [main]
   pull_request:
     branches: [main]
 
@@ -27,20 +25,3 @@ jobs:
 
       - name: Run Tests with Vitest
         run: npm run test
-
-      - name: Run ESLint
-        run: npm run lint
-
-      # FOR IT TO WORK WITH GITHUB Actions and push to Docker registry do the following
-      # In your repo settings, go to Settings → Secrets and variables → Actions → Secrets, and add:
-      # DOCKER_USERNAME – your Docker Hub username
-      # DOCKER_PASSWORD – a Docker Hub personal access token
-
-      # - name: Log in to Docker Hub
-      #   run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
-
-      # - name: Build Docker image
-      #   run: docker build -t ${{ secrets.DOCKER_USERNAME }}/iot-app:latest .
-
-      # - name: Push Docker image to Docker Hub
-      #   run: docker push ${{ secrets.DOCKER_USERNAME }}/iot-app:latest
