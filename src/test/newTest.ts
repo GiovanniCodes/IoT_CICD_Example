@@ -5,3 +5,4 @@ describe("isOverheating", () => {
   it("returns true if temp is above 70", () => {
     expect(isOverheating(75)).toBe(true);
   });
+}
