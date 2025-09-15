@@ -1,3 +1,3 @@
 export function isOverheating(temp: number): boolean {
-  return temp > 80;
+  return temp > 70;
 }
