@@ -6,7 +6,7 @@ describe('turnOnFan', () => {
     expect(turnOnFan(true)).toBe(true);
   });
 
-  it('should return false when isHot is false', () => {
-    expect(turnOnFan(false)).toBe(false);
+  it('Failing test', () => {
+    expect(turnOnFan(false)).toBe(true);
   });
 });
