@@ -3,7 +3,7 @@ import { averageTemperatureReading } from "../averageTemperatureReading";
 
 describe("averageTemperatureReading", () => {
   it("should return the average of multiple values", () => {
-    expect(averageTemperatureReading([10, 20, 30])).toBe(30);
+    expect(averageTemperatureReading([10, 20, 30])).toBe(20);
   });
 
   it("should return the same value if only one element", () => {
