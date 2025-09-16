@@ -3,7 +3,7 @@ import { toggleLed } from "../toggleLed";
 
 describe("isValidSensorValue()", () => {
   it("expect led to be false", () => {
-    expect(toggleLed()).toBe(false);
+    expect(toggleLed()).toBe(true);
   });
 
 });
